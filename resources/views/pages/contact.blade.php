@@ -1,11 +1,12 @@
-@extends('main)
+@extends('main')
 
 @section('content')
     <div class="row">
         <div class="col-md-12">
             <h1>Contact Me</h1>
             <hr>
-            <form>
+            <form action="{{ url('contact') }}" method="POST">
+                {{ csrf_field() }}
                 <div class="form-group">
                     <label name="email">Email: </label>
                     <input id="email" type="email" name="email" class="form-control">
