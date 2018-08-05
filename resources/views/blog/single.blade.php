@@ -22,8 +22,6 @@
             <h3 class="comments-title"><span class="fa fa-comment"></span>  {{ $post->comments()->count() }} Comments</h3>
             @foreach($post->comments as $comment)
                 <div class="comment">
-                    <p><strong>Name:</strong> {{ $comment->name }}</p>
-                    <p><strong>Comment:</strong><br/>{{ $comment->comment }}</p><br>
                     <div class="author-info">
                         <img src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?s=50&d=monsterid" }}" class="author-image">
                         <div class="author-name">
@@ -38,6 +36,7 @@
 
                 </div>
             @endforeach
+
         </div>
     </div>
 
