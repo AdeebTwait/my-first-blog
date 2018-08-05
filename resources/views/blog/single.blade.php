@@ -2,6 +2,10 @@
 
 @section('title', "| $post->title" )
 
+@section('stylesheets')
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+@endsection
+
 @section('content')
 
     <div class="row">
@@ -14,7 +18,7 @@
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h3 class="comments-title"><span class="glyphicon glyphicon-comment"></span>  {{ $post->comments()->count() }} Comments</h3>
+            <h3 class="comments-title"><span class="fa fa-comment"></span>  {{ $post->comments()->count() }} Comments</h3>
             @foreach($post->comments as $comment)
                 <div class="comment">
                     <div class="author-info">
@@ -32,7 +36,7 @@
                 </div>
             @endforeach
         </div>
-
+    </div>
 
     <div class="row">
         <div id="comment-form" class="col-md-8 offset-md-2">
